@@ -1,4 +1,14 @@
-export default function SearchForm({inputOnChange, handleSearchForm, country}) {
+export default function SearchForm({setCountry, getWeatherData, country}) {
+
+    function inputOnChange(e)
+    {
+        setCountry(e.target.value)
+    }
+
+    function handleSearchForm(e) {
+        e.preventDefault()
+        getWeatherData()
+    }
 
     const style = {
         input: {
