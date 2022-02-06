@@ -133,13 +133,14 @@ body {
 @media screen and (min-width: 700px) {
   .weather-by-hour {
     display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
 
 .weather-by-hour__container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .weather-by-hour__heading,
@@ -168,9 +169,9 @@ body {
 
 @media screen and (min-width: 880px) {
   .weather-by-hour__item {
-    width: 6.05em;
+    width: 5.05em;
     flex-grow: 1;
-    flex-shrink: 1;
+    flex-shrink: 0;
     margin: 2px;
   }
 }
