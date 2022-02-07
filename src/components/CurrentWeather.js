@@ -6,6 +6,7 @@ export default function CurrentWeather({weatherData}) {
     return (
         <>
             <div className="location-and-date">
+                &nbsp;
                 <h1 className="location-and-date__location">{weatherData.name}</h1>
                 <div>{new Date(Date.now()).toDateString()}</div>
             </div>
@@ -15,25 +16,26 @@ export default function CurrentWeather({weatherData}) {
                          className="current-temperature__icon" alt=""/>
                 </div>
                 <div className="current-temperature__content-container">
-                    <div
-                        className="current-temperature__value">{getTemperature(weatherData.main.temp)}&deg;</div>
-                    <div className="current-temperature__summary">{weatherData.weather[0].main}</div>
                     <div>
                         <p>Feels like {getTemperature(weatherData.main.feels_like)}&deg;</p>
                     </div>
+                    <div
+                        className="current-temperature__value">{getTemperature(weatherData.main.temp)}&deg;</div>
+                    <div className="current-temperature__summary">{weatherData.weather[0].main}</div>
+
                 </div>
             </div>
             <div className="current-stats">
                 <div>
                     <div className="current-stats__value">{getTemperature(weatherData.main.temp_max)}&deg;</div>
-                    <div className="current-stats__label">Max Temperature</div>
+                    <div className="current-stats__label">Max Temp</div>
                     <div className="current-stats__value">{getTemperature(weatherData.main.temp_min)}&deg;</div>
-                    <div className="current-stats__label">Min Temperature</div>
+                    <div className="current-stats__label">Min Temp</div>
                 </div>
                 <div>
                     <div className="current-stats__value">{weatherData.wind.speed}m/s</div>
                     <div className="current-stats__label">Wind</div>
-                    <div className="current-stats__value">{weatherData.main.humidity}</div>
+                    <div className="current-stats__value">{weatherData.main.humidity}%</div>
                     <div className="current-stats__label">Humidity</div>
                 </div>
                 <div>
