@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 import axios from "axios"
-import Weather from "./components/weather"
+import WeatherHome from "./components/weatherHome"
 
 axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5/"
 
@@ -9,7 +9,7 @@ axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5/"
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <WeatherHome />
     </div>
   );
 }

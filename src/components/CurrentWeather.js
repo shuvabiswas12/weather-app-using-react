@@ -1,6 +1,7 @@
-import iconUrl from "../utilities/IconUrl";
-import getTemperature from "../utilities/TemperatureFormatter";
-import {getFormattedTime} from "../utilities/TimeFormatter.js";
+import iconUrl from "../utilities/iconUrl";
+import getTemperature from "../utilities/temperatureFormatter";
+import {getFormattedTime} from "../utilities/timeFormatter.js";
+import getWindInMPH from "../utilities/windHandler";
 
 export default function CurrentWeather({weatherData}) {
     return (
@@ -33,7 +34,7 @@ export default function CurrentWeather({weatherData}) {
                     <div className="current-stats__label">Min Temp</div>
                 </div>
                 <div>
-                    <div className="current-stats__value">{weatherData.wind.speed}m/s</div>
+                    <div className="current-stats__value">{getWindInMPH(weatherData.wind.speed)}mph</div>
                     <div className="current-stats__label">Wind</div>
                     <div className="current-stats__value">{weatherData.main.humidity}%</div>
                     <div className="current-stats__label">Humidity</div>

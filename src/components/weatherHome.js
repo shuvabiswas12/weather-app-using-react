@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import SearchForm from "./SearchForm";
+import SearchForm from "./searchForm/SearchForm";
 import CurrentWeather from "./CurrentWeather";
-import TodaysWeather from "./TodaysWeather";
+import AllDaysLongWeather from "./AllDaysLongWeather";
 import API_KEY from "../utilities/apiKey";
 
-export default function Weather() {
+export default function WeatherHome() {
     const [country, setCountry] = useState("Bangladesh")
     const [weatherData, setWeatherData] = useState({})
     const [locationData, setLocationData] = useState({})
@@ -36,7 +36,7 @@ export default function Weather() {
             <main className="main-container">
                 <SearchForm setCountry={setCountry} country={country} getWeatherData={getWeatherData}/>
                 <CurrentWeather weatherData={weatherData}/>
-                <TodaysWeather locationData={locationData}/>
+                <AllDaysLongWeather locationData={locationData}/>
             </main>
             }
         </>
