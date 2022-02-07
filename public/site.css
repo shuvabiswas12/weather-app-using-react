@@ -126,21 +126,21 @@ body {
 
 /* weather-by-hour */
 .weather-by-hour {
-  display: none;
+  display: block;
   width: 100%;
 }
 
 @media screen and (min-width: 700px) {
   .weather-by-hour {
     display: block;
-    overflow-x: scroll;
-    overflow-y: hidden;
   }
 }
 
 .weather-by-hour__container {
   display: flex;
   justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .weather-by-hour__heading,
@@ -159,12 +159,15 @@ body {
 
 .weather-by-hour__item {
   padding: 0.8em 0;
-  width: 8%;
+  width: 5em;
   border-radius: 5px;
   background-color: rgba(0,0,0,0.15);
   font-size: 1.125em;
   text-align: center;
   margin: 2px;
+  flex-grow: 1;
+  flex-shrink: 0;
+;
 }
 
 @media screen and (min-width: 880px) {
@@ -263,15 +266,15 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-.weather-by-hour::-webkit-scrollbar {
+.weather-by-hour__container::-webkit-scrollbar {
   height: .5em;
 }
 
-.weather-by-hour::-webkit-scrollbar-track {
+.weather-by-hour__container::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px #714cfe;
 }
 
-.weather-by-hour::-webkit-scrollbar-thumb {
+.weather-by-hour__container::-webkit-scrollbar-thumb {
   background-color: #ff9e22;
   outline: 1px solid slategrey;
 }
