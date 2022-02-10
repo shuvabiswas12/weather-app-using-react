@@ -1,2 +1,2 @@
-const iconUrl = "http://openweathermap.org/img/wn/"
+const iconUrl = "https://openweathermap.org/img/wn/"
 export default iconUrl

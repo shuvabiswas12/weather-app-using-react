@@ -2,7 +2,7 @@ export default function SearchForm({setCountry, getWeatherData, country}) {
 
     function inputOnChange(e)
     {
-        setCountry(e.target.value)
+        setCountry(e.target.value.trim())
     }
 
     function handleSearchForm(e) {
