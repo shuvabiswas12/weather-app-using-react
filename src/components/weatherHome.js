@@ -4,6 +4,7 @@ import SearchForm from "./searchForm/SearchForm";
 import CurrentWeather from "./CurrentWeather";
 import AllDaysLongWeather from "./AllDaysLongWeather";
 import API_KEY from "../utilities/apiKey";
+import CopyRight from "./copyRight/CopyRight";
 
 export default function WeatherHome() {
     const [country, setCountry] = useState("Bangladesh")
@@ -37,6 +38,7 @@ export default function WeatherHome() {
                 <SearchForm setCountry={setCountry} country={country} getWeatherData={getWeatherData}/>
                 <CurrentWeather weatherData={weatherData}/>
                 <AllDaysLongWeather locationData={locationData}/>
+                <CopyRight />
             </main>
             }
         </>
